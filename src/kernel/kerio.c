@@ -35,7 +35,7 @@ void gets(char * buf, int buflen) {
         buf[buflen-1] = '\0';
 }
 
-void printf(const char * fmt, ...) {
+void printf(const char* fmt, ...) {
     va_list args;
     va_start(args, fmt);
 

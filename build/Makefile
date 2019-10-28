@@ -1,5 +1,5 @@
 # Don't use normal gcc, use the arm cross compiler
-TOOLCHAIN = ./gcc-arm-none-eabi-6-2017-q2-update/bin/arm-none-eabi
+TOOLCHAIN = ~/.gcc-arm/bin/arm-none-eabi
 CC = $(TOOLCHAIN)-gcc
 OBJCOPY = $(TOOLCHAIN)-objcopy
 GDB = $(TOOLCHAIN)-gdb
@@ -16,7 +16,7 @@ else
 endif
 
 CFLAGS= -mcpu=$(CPU) -fpic -ffreestanding $(DIRECTIVES) -g
-CSRCFLAGS= -O2 -Wall -Wextra
+CSRCFLAGS= -O2 -Wall -Wextra -g
 LFLAGS= -ffreestanding -O2 -nostdlib
 
 # Location of the files
